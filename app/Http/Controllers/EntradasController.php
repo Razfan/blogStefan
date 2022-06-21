@@ -6,7 +6,7 @@ use App\Exports\EntradasExport;
 use App\Models\entradas;
 use Illuminate\Http\Request;
 use Maatwebsite\Excel\Facades\Excel;
-use dompdf\dompdf;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class EntradasController extends Controller
 {
@@ -36,7 +36,7 @@ class EntradasController extends Controller
 
     public function exportPDF() 
     {
-        return (new EntradasExport)->download('entradas.pdf', Excel::DOMPDF);
+        return (new EntradasExport)->download('entradas.pdf', \Maatwebsite\Excel\Excel::DOMPDF);
     }
 
     /**

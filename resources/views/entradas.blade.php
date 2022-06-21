@@ -24,6 +24,7 @@
                             <th><b>Descripcion</b></th>
                             <th><b>Fecha</b></th>
                             <th><b>Operaciones</b></th>
+                            <th><b>Exportar</b></th>
                         </tr>
                         @foreach ($entradas as $item)
                         <tr>
@@ -39,15 +40,20 @@
                                 <button class="btn btn-info" onclick="location.href='{{ route('entradas.add')}}'">Añadir</button>
                                 <button class="btn btn-info" onclick="location.href='{{ route('entradas.edit', $item->id)}}'">Editar</button>
                                 <button class="btn btn-info" onclick="location.href='{{  route('entradas.delete', $item->id) }}'">Eliminar</button>
+                                
                                 @else
                                 <button class="btn btn-info" onclick="location.href='{{ route('login') }}'">Login</button>
                                 @endauth
                                 
                             </td>
-                        </tr>
+                            <td>
+                                <img src="{{ asset('images/pdf.png') }}" onclick="location.href='{{ route('entradas.exportPDF')}}'"  class="img-fluid">
+                                <img src="{{ asset('images/excel.png') }}" onclick="location.href='{{ route('entradas.export')}}'"  class="img-fluid"></td>
+                            </tr>
                         @endforeach
                     </table>
                     {{ $entradas->links("pagination::bootstrap-4") }}
+                    
                 </div>
             </div>
         </div>

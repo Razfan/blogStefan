@@ -43,12 +43,12 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('entradas.index') }}">{{ 'Listado Entradas' }}</a>
                         </li>
-                        <li class="nav-item">
+                        {{-- <li class="nav-item">
                             <a class="nav-link" href="{{ route('entradas.export') }}">{{ 'Exportar Entradas EXCEL' }}</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('entradas.exportPDF') }}">{{ 'Exportar Entradas PDF' }}</a>
-                        </li>
+                        </li> --}}
                         
                     </ul>
                     

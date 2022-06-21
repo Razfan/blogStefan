@@ -16,6 +16,10 @@
   color: black;
   letter-spacing: -1px;
   padding: 10px 0;
+} 
+
+img{
+  cursor: pointer;
 }
 
 .pie {

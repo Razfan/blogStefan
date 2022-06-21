@@ -48,7 +48,8 @@
                             </td>
                             <td>
                                 <img src="{{ asset('images/pdf.png') }}" onclick="location.href='{{ route('entradas.exportPDF')}}'"  class="img-fluid">
-                                <img src="{{ asset('images/excel.png') }}" onclick="location.href='{{ route('entradas.export')}}'"  class="img-fluid"></td>
+                                <img src="{{ asset('images/excel.png') }}" onclick="location.href='{{ route('entradas.export')}}'"  class="img-fluid">
+                            </td>
                             </tr>
                         @endforeach
                     </table>

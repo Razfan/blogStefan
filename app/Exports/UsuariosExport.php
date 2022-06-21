@@ -2,12 +2,12 @@
 
 namespace App\Exports;
 
-use App\Models\entradas;
+use App\Models\User;
 use Maatwebsite\Excel\Concerns\FromCollection;
 use Maatwebsite\Excel\Concerns\ShouldAutoSize;
 use Maatwebsite\Excel\Concerns\Exportable;
 
-class EntradasExport implements FromCollection, ShouldAutoSize
+class UsuariosExport implements FromCollection, ShouldAutoSize
 {
     use Exportable;
     /**
@@ -15,6 +15,6 @@ class EntradasExport implements FromCollection, ShouldAutoSize
     */
     public function collection()
     {
-        return entradas::all();
+        return User::all();
     }
 }

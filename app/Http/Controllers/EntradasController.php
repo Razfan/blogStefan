@@ -6,7 +6,6 @@ use App\Exports\EntradasExport;
 use App\Models\entradas;
 use Illuminate\Http\Request;
 use Maatwebsite\Excel\Facades\Excel;
-use Barryvdh\DomPDF\Facade\Pdf;
 
 class EntradasController extends Controller
 {

@@ -20,6 +20,7 @@
                             <th><b>Nombre</b></th>
                             <th><b>Email</b></th>
                             <th><b>Operaciones</b></th>
+                            <th><b>Exportar</b></th>
                         </tr>
                         @foreach ($usuarios as $item)
                         <tr>
@@ -33,6 +34,10 @@
                                 @else
                                 <button class="btn btn-info" onclick="location.href='{{ route('login') }}'">Login</button>
                                 @endauth
+                            </td>
+                            <td>
+                                <img src="{{ asset('images/pdf.png') }}" onclick="location.href='{{ route('usuarios.exportPDF')}}'"  class="img-fluid">
+                                <img src="{{ asset('images/excel.png') }}" onclick="location.href='{{ route('usuarios.export')}}'"  class="img-fluid">
                             </td>
                         </tr>
                         @endforeach

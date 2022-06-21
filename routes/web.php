@@ -20,6 +20,8 @@ Route::view('/', 'home')->name('home');
 //Rutas Usuarios
 Route::view('/usuarios', 'usuarios')->name('usuarios');
 Route::get('/usuarios', 'App\Http\Controllers\UsuariosController@index')->name('usuarios.index');
+Route::get('/usuarios/export', 'App\Http\Controllers\UsuariosController@export')->name('usuarios.export');
+Route::get('/usuarios/exportPDF', 'App\Http\Controllers\UsuariosController@exportPDF')->name('usuarios.exportPDF');
 Route::get('/usuarios/create', 'App\Http\Controllers\UsuariosController@create')->name('usuarios.create');
 
 //Rutas Entradas

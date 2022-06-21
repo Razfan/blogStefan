@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\UsuariosExport;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\usuarios;
+use Maatwebsite\Excel\Facades\Excel;
 
 class UsuariosController extends Controller
 {
@@ -22,6 +24,16 @@ class UsuariosController extends Controller
         ]);
 
 
+    }
+
+    public function export() 
+    {
+        return Excel::download(new UsuariosExport, 'entradas.xlsx');
+    }
+
+    public function exportPDF() 
+    {
+        return (new UsuariosExport)->download('usuarios.pdf', \Maatwebsite\Excel\Excel::DOMPDF);
     }
 
     /**

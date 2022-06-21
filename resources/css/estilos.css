@@ -1,0 +1,116 @@
+.encabezado {
+  color: #006989;
+  text-align: center;
+  padding: 10px 0;
+  background-color: #eaebed;
+}
+
+*{
+  font-style: unset;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.container{
+  margin-top: 10%;
+}
+
+div{
+  padding: 5px;
+}
+
+.cuerpo {
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  color: black;
+  letter-spacing: -1px;
+  padding: 10px 0;
+  background-color: #75aabb;
+}
+
+.pie {
+  font-family: "Lato", sans-serif;
+  text-transform: uppercase;
+  font-size: 20px;
+  color: #c0e0de;
+  letter-spacing: -1px;
+  padding: 10px 0;
+  background-color: #4f7cac;
+}
+
+.text-center {
+  text-align: center;
+}
+
+img.alineadoTextoImagen {
+  vertical-align: middle;
+}
+.centrar {
+  width: 90%;
+  max-width: 700px;
+  margin: auto;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+  background-color: #a3bac3;
+  color: black;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 16px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.navegacion {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.paginacion ul {
+  list-style: none;
+}
+
+.paginacion ul li {
+  display: inline-block;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.paginacion ul .active a {
+  background: #b0cbd4;
+}
+
+.paginacion ul .disable {
+  background: #c8c8c8;
+  display: inline-block;
+  padding: 15px 25px;
+  cursor: not-allowed;
+  color: #fff;
+  text-decoration: none;
+}
+
+.paginacion ul li a {
+  display: inline-block;
+  padding: 15px 25px;
+  border-radius: 50%;
+  background: #006989;
+  color: #fff;
+  text-decoration: none;
+}
+
+.paginacion ul li a:hover {
+  text-decoration: none;
+  background: #3299bb;
+}
+
+.tablaCabezado {
+  padding-bottom: 30px;
+}

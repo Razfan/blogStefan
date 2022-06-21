@@ -28,6 +28,7 @@ Route::get('/usuarios/create', 'App\Http\Controllers\UsuariosController@create')
 Route::view('/entradas', 'entradas')->name('entradas');
 Route::get('/entradas', 'App\Http\Controllers\EntradasController@index')->name('entradas.index');
 Route::get('/entradas/add', 'App\Http\Controllers\EntradasController@add')->name('entradas.add');
+Route::get('/entradas/show/{id?}', 'App\Http\Controllers\EntradasController@show')->name('entradas.show');
 Route::get('/entradas/export', 'App\Http\Controllers\EntradasController@export')->name('entradas.export');
 Route::get('/entradas/exportPDF', 'App\Http\Controllers\EntradasController@exportPDF')->name('entradas.exportPDF');
 Route::post('/entradas/add', 'App\Http\Controllers\EntradasController@store')->name('entradas.store');

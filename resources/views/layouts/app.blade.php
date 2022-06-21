@@ -43,18 +43,19 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('entradas.index') }}">{{ 'Listado Entradas' }}</a>
                         </li>
-                        {{-- <li class="nav-item">
-                            <a class="nav-link" href="{{ route('entradas.export') }}">{{ 'Exportar Entradas EXCEL' }}</a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('usuarios.exportPDF') }}">{{ 'Exportar Usuarios PDF' }}</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('entradas.exportPDF') }}">{{ 'Exportar Entradas PDF' }}</a>
-                        </li> --}}
-                        
+                        </li>
                     </ul>
+                    
                     
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">@yield('buscar')</li>
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))

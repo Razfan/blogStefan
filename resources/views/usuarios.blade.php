@@ -1,5 +1,16 @@
 @extends('layouts.app')
 
+@section('buscar')
+<div class="input-group ps-5">
+    <div id="navbar-search-autocomplete" class="form-outline">
+      <input type="search" id="buscar" class="form-control" />
+    </div>
+    <button type="button" class="btn btn-primary">Buscar Usuario
+    </button>
+  </div>
+</div>
+@endsection
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">

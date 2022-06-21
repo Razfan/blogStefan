@@ -51,6 +51,16 @@
                                 <img src="{{ asset('images/excel.png') }}" onclick="location.href='{{ route('entradas.export')}}'"  class="img-fluid">
                             </td>
                             </tr>
+                            @section('buscar')
+                                <form action="{{ route('entradas.show'), $item->id }}" method="GET" >
+                                @csrf
+                                    <div id="navbar-search-autocomplete" class="form-outline">
+                                        <input type="search" id="id" class="form-control" name="id" />
+                                    </div>
+                                        <button type="submit" class="btn btn-primary" onclick="location.href='{{  route('entradas.show', $item->id) }}'">Buscar Entrada
+                                    </button>
+                                </form>
+                            @endsection
                         @endforeach
                     </table>
                     {{ $entradas->links("pagination::bootstrap-4") }}

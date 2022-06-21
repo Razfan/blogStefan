@@ -64,9 +64,11 @@ class EntradasController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Request $request)
     {
-        //
+        $id = $request->id;
+        $entradas = entradas::find($id);
+        return view('entradasshow', ['entradas'=>$entradas]);
     }
 
     public function edit(Request $request)
@@ -86,17 +88,6 @@ class EntradasController extends Controller
     public function update(Request $request)
     {
         $id = $request->id;
-        /* $data = array(
-            'id' => $request->id,
-            'usuario_id' => $request->usuario_id,
-            'categoria_id' => $request->categoria_id,
-            'Titulo' => $request->Titulo,
-            'Imagen' => $request->Imagen,
-            'Descripcion' => $request->Descripcion,
-            'Fecha' => $request->Fecha,
-            
-        );
-        entradas::where('id',$id)->update($data); */
 
         $entradas = entradas::find($id);
         $entradas->id = $request->id; 
